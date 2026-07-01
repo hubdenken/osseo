@@ -1,0 +1,431 @@
+{
+    "common": {
+        "home": "Home",
+        "about_us": "Sobre Nós",
+        "services": "Serviços",
+        "plans": "Planos",
+        "contact": "Contacto",
+        "contact_us": "Contacte-nos",
+        "see_plans": "Ver Planos",
+        "faq": "FAQ",
+        "whatsapp_message": "Olá! Gostaria de saber mais sobre o método Ósseo+.",
+        "all_rights_reserved": "Todos os direitos reservados.",
+        "subscribe_now": "Assinar Agora",
+        "request_quote": "Pedir Orçamento",
+        "book_assessment": "Marcar Avaliação",
+        "learn_more": "Saiba Mais",
+        "terms": "Termos de Uso",
+        "privacy": "Política de Privacidade",
+        "complaints_book": "Livro de Reclamações",
+        "performance": "Performance",
+        "get_started": "Começar Agora"
+    },
+    "navbar": {
+        "slogan": "Saúde Óssea e Biomecânica de Elite"
+    },
+    "home": {
+        "hero": {
+            "badge": "O Futuro da Longevidade",
+            "title_base": "Transforme a sua saúde com o método ",
+            "title_highlight": "Ósseo+",
+            "title_suffix": "",
+            "description": "Uma abordagem revolucionária à longevidade, focada na saúde óssea, força e equilíbrio através da tecnologia biomecânica de elite.",
+            "cta_start": "Começar Jornada",
+            "cta_appointment": "Agendar Avaliação"
+        },
+        "pillars": {
+            "title": "Os Nossos Pilares de Performance",
+            "subtitle": "Uma abordagem integrada para maximizar o seu potencial físico e ósseo.",
+            "balance": {
+                "title": "Equilíbrio",
+                "item1": "Treino propriocetivo avançado",
+                "item2": "Prevenção ativa de quedas",
+                "item3": "Estabilidade postural dinâmica",
+                "systems": "Sistemas: Vestibular, Somatossensorial e Visual"
+            },
+            "strength": {
+                "title": "Força",
+                "item1": "Desenvolvimento muscular funcional",
+                "item2": "Potência e resistência",
+                "item3": "Otimização metabólica"
+            },
+            "bone_health": {
+                "title": "Osso",
+                "item1": "Aumento da densidade mineral",
+                "item2": "Osteogenic Loading",
+                "item3": "Saúde esquelética a longo prazo"
+            }
+        },
+        "features": {
+            "title": "Porquê o Ósseo+?",
+            "description_base": "Utilizamos tecnologia ",
+            "description_rev": "revolucionária ",
+            "description_comp": "que combina ",
+            "description_bone": "carregamento osteogénico ",
+            "description_strength": "e treino de força de alta precisão.",
+            "item1_title": "Avaliação Digital",
+            "item1_desc": "Análise biomecânica completa do seu estado físico atual.",
+            "item2_title": "Treino Seguro",
+            "item2_desc": "Estímulo seguro e eficaz para o fortalecimento ósseo.",
+            "item3_title": "Sessões Curtas",
+            "item3_desc": "Apenas 15-20 minutos por semana para resultados reais.",
+            "item4_title": "Evolução Real",
+            "item4_desc": "Monitorização constante do seu progresso esquelético."
+        },
+        "cta": {
+            "title": "Pronto para investir na sua saúde futura?"
+        },
+        "quote": {
+            "text": "O músculo não é apenas uma questão de fitness. É o órgão da longevidade.",
+            "author": "Ósseo+"
+        },
+        "did_you_know": {
+            "title": "Sabia que?",
+            "stat1": "1 em cada 3 mulheres e 1 em cada 5 homens acima dos 50 anos sofrerão uma fratura osteoporótica.",
+            "stat2": "8.9 milhões de fraturas ocorrem anualmente — uma a cada 3 segundos.",
+            "highlight": "A osteoporose é uma epidemia silenciosa."
+        }
+    },
+    "about": {
+        "hero": {
+            "badge": "A Nossa Missão",
+            "title_base": "Redefinindo os limites do",
+            "title_suffix": "envelhecimento ",
+            "title_highlight": "saudável",
+            "description": "O Ósseo+ nasceu da necessidade de oferecer uma solução científica e tecnológica para a preservação da autonomia e vitalidade ao longo da vida."
+        },
+        "history": {
+            "title": "A Nossa Jornada",
+            "item1": {
+                "year": "2018",
+                "description": "Fundação com foco em fisiologia clínica e biomecânica."
+            },
+            "item2": {
+                "year": "2020",
+                "description": "Integração de protocolos avançados de osteogenic loading."
+            },
+            "item3": {
+                "year": "Hoje",
+                "description": "Referência nacional em longevidade e saúde esquelética."
+            }
+        },
+        "team": {
+            "badge": "Especialistas",
+            "title": "Liderança Clínica",
+            "specialist": {
+                "name": "Dr. Andrew P. Hatch",
+                "role": "Fundador e Diretor Clínico",
+                "bio_p1": "Com mais de 30 anos de experiência em quiropraxia, dediquei a minha carreira a compreender e tratar desafios musculoesqueléticos em todos os grupos etários. Tendo tratado mais de 20.000 pacientes, o meu foco tem sido em condições como dores no pescoço e costas, hérnias discais, enxaquecas, tonturas, má postura e distúrbios degenerativos da coluna.",
+                "bio_p2": "Reconhecendo as necessidades crescentes da nossa população em envelhecimento, fundei o Ósseo+ para abordar e prevenir condições como a sarcopenia e a osteoporose. A nossa missão é promover um envelhecimento saudável, aumentando a força muscular, a densidade óssea e reduzindo o risco de quedas, fraturas e complicações metabólicas.",
+                "bio_p4": "Procuro ativamente colaborações com investigadores médicos para validar e expandir as nossas metodologias no Ósseo+. Além disso, estou a construir uma rede de referenciação dentro da comunidade médica portuguesa para promover abordagens interdisciplinares no tratamento de pacientes."
+            }
+        }
+    },
+    "services": {
+        "hero": {
+            "badge": "Metodologia de Elite",
+            "title_base": "Ciência e Tecnologia ao serviço do seu ",
+            "title_highlight": "Corpo",
+            "description": "O nosso método integra os três pilares fundamentais da integridade física humana: Bone (Osso), Strength (Força) e Balance (Equilíbrio)."
+        },
+        "pillars": {
+            "p1": {
+                "title": "Pilar Osso",
+                "desc": "Estímulo esquelético através de carregamento osteogénico controlado.",
+                "list1": "Aumento da densidade óssea",
+                "list2": "Prevenção de osteoporose"
+            },
+            "p2": {
+                "title": "Pilar Força",
+                "desc": "Desenvolvimento muscular focado na funcionalidade e longevidade.",
+                "list1": "Hipertrofia funcional",
+                "list2": "Proteção articular"
+            },
+            "p3": {
+                "title": "Pilar Equilíbrio",
+                "desc": "Treino neurossensorial para estabilidade e coordenação.",
+                "list1": "Controlo postural",
+                "list2": "Prevenção de quedas"
+            }
+        },
+        "tech": {
+            "badge": "Tecnologia",
+            "title": "Equipamento de Alta Precisão",
+            "subtitle": "Utilizamos as ferramentas mais avançadas do mercado para garantir resultados seguros e mensuráveis.",
+            "item1_title": "Estímulo Ósseo",
+            "item1_desc": "Estimulação óssea segura e monitorizada.",
+            "item2_title": "Melhor Equilíbrio",
+            "item2_desc": "Análise e treino de equilíbrio digital.",
+            "item3_title": "ISO-Control",
+            "item3_desc": "Monitorização da força isométrica em tempo real.",
+            "item4_title": "Body Composition",
+            "item4_desc": "Análise detalhada de massa magra e densidade.",
+            "monitor_badge": "Real-Time Tracking",
+            "monitor_title": "Monitorização Biomecânica",
+            "monitor_desc": "Feedback visual instantâneo para garantir a forma perfeita e o estímulo ideal."
+        },
+        "science": {
+            "title": "A Nossa Ciência",
+            "subtitle": "Fundamentação científica por trás do método Ósseo+.",
+            "wolff_law": {
+                "title": "Lei de Wolff",
+                "desc": "A arquitetura e densidade do osso adaptam-se ao estresse mecânico aplicado sobre ele. O osso é um tecido dinâmico que responde ao estímulo."
+            },
+            "osteogenic": {
+                "title": "Osteogenic Loading",
+                "desc": "O método mais eficaz para estimular a formação de novo tecido ósseo, superando largamente atividades de baixo impacto como caminhada ou vibração."
+            },
+            "longevity": {
+                "title": "Órgão da Longevidade",
+                "desc": "O músculo desempenha um papel crítico na saúde metabólica e na preservação da densidade óssea ao longo dos anos."
+            }
+        },
+        "athletes_promo": {
+            "badge": "PARA ATLETAS",
+            "title": "Análise de Performance de Elite",
+            "description": "Desbloqueie o seu potencial máximo com o nosso sistema de precisão dedicado a atletas de alto rendimento.",
+            "cta": "Explorar Ósseo+ Performance"
+        }
+    },
+    "plans": {
+        "hero_title": "Escolha o seu caminho para a Longevidade",
+        "hero_subtitle": "Planos personalizados desenhados para as suas necessidades específicas e objetivos de saúde.",
+        "p1": {
+            "title": "1ª Avaliação",
+            "subtitle": "O Primeiro Passo para o Seu Bem-Estar",
+            "desc": "Na Ósseo+, sabemos que cada corpo é único e merece atenção especializada. A nossa 1.ª Avaliação permite compreender a sua condição, identificar possíveis desequilíbrios e definir o melhor plano para aliviar dores musculares, ósseas ou articulares.",
+            "price_info": "Para novos clientes, esta avaliação tem um custo de 55€. No entanto, para quem já é cliente da Global Wellness, o serviço é gratuito.",
+            "footer": "Dê prioridade à sua saúde. Marque já a sua avaliação e inicie o caminho para uma vida sem dor!"
+        },
+        "p2": {
+            "title": "Terapia Equilíbrio",
+            "subtitle": "Cuide do Seu Corpo de Forma Completa",
+            "desc": "A Terapia Equilíbrio foi desenvolvida para ajudar a restaurar o bem-estar, aliviar dores musculares e articulares e melhorar a sua qualidade de vida. Com um acompanhamento personalizado, esta abordagem promove o alinhamento do corpo e o alívio de desconfortos de forma eficaz.",
+            "pack1": "12 sessões por 330€ – inclui 1 sessão gratuita",
+            "pack2": "24 sessões por 630€ – inclui 3 sessões gratuitas",
+            "footer": "Invista na sua saúde e bem-estar com um tratamento contínuo e eficaz. Marque já as suas sessões e sinta a diferença!"
+        },
+        "p3": {
+            "title": "Terapia Ósseo + Equilíbrio",
+            "subtitle": "O Melhor Cuidado Para o Seu Corpo",
+            "desc": "A Terapia Ósseo + Equilíbrio combina técnicas especializadas para restaurar o equilíbrio do corpo, aliviar dores ósseas e musculares e promover o seu bem-estar global. Com um acompanhamento contínuo, esta terapia ajuda a melhorar a mobilidade, reduzir desconfortos e prevenir futuras complicações.",
+            "pack1": "12 sessões por 275€ – inclui 1 sessão gratuita",
+            "pack2": "24 sessões por 525€ – inclui 3 sessões gratuitas",
+            "footer": "Dê ao seu corpo o cuidado que merece. Agende já as suas sessões e recupere o seu bem-estar!"
+        },
+        "agendar": "AGENDAR CONSULTA",
+        "saiba_mais": "Saber Mais",
+        "athletes_promo": {
+            "title": "Avaliação de Performance para Atletas",
+            "subtitle": "Descubra a sua capacidade máxima de força e perfil biomecânico.",
+            "cta": "Ver Planos para Atletas"
+        }
+    },
+    "contact": {
+        "title": "Comece a sua Transformação",
+        "subtitle": "Estamos aqui para esclarecer todas as suas dúvidas e ajudar no seu percurso.",
+        "form_title": "Envie uma Mensagem",
+        "name": "Nome",
+        "email": "Email",
+        "subject": "Assunto",
+        "message": "Mensagem",
+        "form": {
+            "name_placeholder": "O seu nome completo",
+            "email_placeholder": "o-seu-email@exemplo.com",
+            "message_placeholder": "Como podemos ajudar?"
+        },
+        "send": "Enviar Mensagem",
+        "info_title": "Informações de Contacto",
+        "address_label": "Endereço",
+        "phone_label": "Telefone",
+        "email_label": "Email",
+        "hours_label": "Horário de Funcionamento",
+        "location": "A Nossa Localização"
+    },
+    "faq": {
+        "title": "Dúvidas Frequentes",
+        "subtitle": "Encontre respostas rápidas para as questões mais comuns sobre o nosso método.",
+        "q1": "O treino é seguro para pessoas com osteoporose?",
+        "a1": "Sim, é extremamente seguro. O nosso método foi desenhado precisamente para estimular o osso de forma controlada, sem o impacto ou risco das atividades físicas convencionais.",
+        "q2": "Quanto tempo demora cada sessão?",
+        "a2": "As sessões são curtas e eficientes, durando entre 15 a 20 minutos. O foco é na intensidade e qualidade do estímulo, não na duração.",
+        "q3": "Com que frequência devo treinar?",
+        "a3": "Para a maioria dos protocolos de saúde óssea, uma sessão semanal é suficiente para gerar os estímulos necessários para a remineralização esquelética.",
+        "q4": "Preciso de levar roupa de ginásio?",
+        "a4": "Pode vir com a sua roupa normal do dia-a-dia, desde que seja confortável. Como não transpiramos significativamente durante o estímulo, não é obrigatório o uso de vestuário desportivo."
+    },
+    "footer": {
+        "about_desc": "Dedicados a transformar vidas através da saúde óssea e biomecânica. Tecnologia de elite para o seu bem-estar.",
+        "quick_links": "Links Rápidos",
+        "connect": "Conecte-se",
+        "whatsapp_btn": "Falar no WhatsApp",
+        "developed_by": "Desenvolvido por"
+    },
+    "loader": {
+        "loading": "A carregar saúde...",
+        "welcome": "Bem-vindo"
+    },
+    "terms": {
+        "title": "Termos de Uso",
+        "subtitle": "Por favor, leia atentamente os termos e condições de utilização do nosso website e serviços.",
+        "last_updated": "Última atualização: Fevereiro de 2026",
+        "acceptance": {
+            "title": "Aceitação dos Termos",
+            "content": "Ao aceder e utilizar o website da Ósseo+, o utilizador concorda em cumprir e ficar vinculado aos seguintes termos e condições de uso. Se não concordar com qualquer parte destes termos, não deverá utilizar o nosso website."
+        },
+        "services": {
+            "title": "Descrição dos Serviços",
+            "content": "A Ósseo+ fornece informações sobre saúde óssea e serviços de treino biomecânico. Reservamo-nos o direito de modificar, suspender ou descontinuar qualquer aspeto dos nossos serviços a qualquer momento."
+        },
+        "medical": {
+            "title": "Isenção de Responsabilidade Médica",
+            "content": "O conteúdo deste website destina-se apenas a fins informativos e não constitui aconselhamento médico, diagnóstico ou tratamento. Procure sempre o conselho do seu médico ou outro profissional de saúde qualificado para qualquer dúvida que possa ter sobre uma condição médica."
+        },
+        "User_responsibilities": {
+            "title": "Responsabilidades do Utilizador",
+            "content": "O utilizador compromete-se a utilizar o website apenas para fins legais e de forma que não infrinja os direitos de, restrinja ou iniba o uso e usufruto do website por terceiros."
+        },
+        "intellectual_property": {
+            "title": "Propriedade Intelectual",
+            "content": "Todo o conteúdo presente neste website, incluindo textos, gráficos, logótipos e imagens, é propriedade da Ósseo+ ou dos seus fornecedores de conteúdo e está protegido pelas leis de direitos de autor."
+        },
+        "changes": {
+            "title": "Alterações aos Termos",
+            "content": "A Ósseo+ reserva-se o direito de alterar estes termos a qualquer momento. O uso continuado do website após tais alterações constituirá a sua aceitação dos novos termos."
+        },
+        "contact": {
+            "title": "Contacto",
+            "content": "Para quaisquer questões sobre estes termos, por favor contacte-nos através do email ola@osseo.pt."
+        }
+    },
+    "privacy": {
+        "title": "Política de Privacidade",
+        "subtitle": "A sua privacidade é importante para nós. Saiba como recolhemos, utilizamos e protegemos os seus dados.",
+        "last_updated": "Última atualização: Fevereiro de 2026",
+        "collection": {
+            "title": "Recolha de Dados",
+            "content": "Recolhemos informações que nos fornece diretamente, como quando preenche um formulário de contacto ou subscreve a nossa newsletter. Estes dados podem incluir o seu nome, endereço de email e número de telefone."
+        },
+        "usage": {
+            "title": "Uso da Informação",
+            "content": "Utilizamos as informações recolhidas para fornecer, manter e melhorar os nossos serviços, responder aos seus pedidos e enviar comunicações relevantes sobre a Ósseo+."
+        },
+        "cookies": {
+            "title": "Cookies",
+            "content": "Utilizamos cookies para melhorar a sua experiência de navegação e analisar o tráfego do website. Pode controlar o uso de cookies através das definições do seu navegador."
+        },
+        "sharing": {
+            "title": "Partilha de Dados",
+            "content": "Não vendemos, comercializamos ou transferimos as suas informações pessoais para terceiros sem o seu consentimento, exceto quando necessário para fornecer os nossos serviços ou cumprir a lei."
+        },
+        "security": {
+            "title": "Segurança",
+            "content": "Implementamos medidas de segurança para proteger as suas informações pessoais contra acesso, alteração, divulgação ou destruição não autorizados."
+        },
+        "rights": {
+            "title": "Os Seus Direitos",
+            "content": "De acordo com o RGPD, tem o direito de aceder, retificar, portar e apagar os seus dados pessoais. Para exercer estes direitos, contacte-nos."
+        },
+        "contact": {
+            "title": "Contacto",
+            "content": "Se tiver dúvidas sobre esta Política de Privacidade, contacte-nos através do email ola@osseo.pt."
+        }
+    },
+    "cookies": {
+        "title": "Utilizamos Cookies",
+        "description": "Este site utiliza cookies para garantir que obtém a melhor experiência na nossa plataforma.",
+        "accept": "Aceitar",
+        "decline": "Recusar",
+        "privacy_link": "Ler Política de Privacidade"
+    },
+    "performance": {
+        "hero": {
+            "badge": "Ósseo+ Performance",
+            "title": "Avaliar. Performance. Melhorar. Performar.",
+            "subtitle": "O Ósseo+ Performance é um sistema de avaliação e treino de força de alta precisão, desenvolvido para atletas que procuram resultados mensuráveis — não suposições.",
+            "description": "O Ósseo+ Performance é um sistema de avaliação e treino de força de alta precisão, desenvolvido para atletas que procuram resultados mensuráveis — não suposições.",
+            "scroll": "Scroll"
+        },
+        "nav": {
+            "hero": "Performance",
+            "precision": "Tecnologia",
+            "assessment": "Investimento",
+            "advantages": "Vantagens",
+            "report": "Relatórios",
+            "expert": "Dr. Hatch",
+            "cta": "Começar"
+        },
+        "intro": {
+            "title": "Precisão acima das",
+            "highlight": "Suposições.",
+            "text": "Utilizando tecnologia isométrica avançada, avaliamos a sua capacidade máxima de produção de força e acompanhamos o desempenho neuromuscular ao longo do tempo. Isto permite-lhe treinar de forma mais inteligente, monitorizar a evolução com dados objetivos e melhorar o desempenho e a resiliência.",
+            "data_label": "Dados Objetivos",
+            "guess_label": "Suposições",
+            "live_badge": "Avaliação ao Vivo",
+            "live_desc": "Análise 3D e de Força em Tempo Real"
+        },
+        "get": {
+            "title": "A Sua Vantagem",
+            "assessment": {
+                "title": "Avaliação Inicial de Performance",
+                "price": "145€",
+                "subtitle": "O seu ponto de partida para uma evolução mensurável.",
+                "includes_title": "Inclui:",
+                "item1": "Avaliação de Composição Corporal 3D",
+                "item2": "Avaliação da Densidade Óssea",
+                "item3": "Avaliação Biomecânica",
+                "item4": "Configuração personalizada do equipamento",
+                "item5_title": "Testes de força máxima (5–6 movimentos principais):",
+                "move1": "Elevação Vertical",
+                "move2": "Encolhimento de Ombros",
+                "move3": "Leg Press",
+                "move4": "Chest Press",
+                "move5": "Core Pull/Crunch",
+                "move6": "Remada Sentada",
+                "benefit1": "Defina o seu perfil inicial de força e identifique limitações de performance",
+                "benefit2": "Receba um relatório detalhado de performance com os seus resultados e principais insights"
+            },
+            "sessions": {
+                "title": "Sessões Contínuas",
+                "price": "€30",
+                "subtitle": "Reavaliar, treinar e acompanhar a sua evolução.",
+                "item1": "Reavaliação de força + treino neuromuscular",
+                "item2": "Monitorização objetiva da evolução ao longo do tempo",
+                "item3": "Relatório de performance após cada sessão, para acompanhar melhorias e tendências",
+                "freq_title": "Frequência flexível:",
+                "freq1": "Semanal (ideal para performance e aumento da densidade óssea)",
+                "freq2": "Quinzenal",
+                "freq3": "Mensal"
+            }
+        },
+        "why": {
+            "title": "Porque é que os atletas escolhem o Ósseo+ Performance",
+            "item1": "Aumentar a produção máxima de força",
+            "item2": "Melhorar a capacidade de carga e resistência ao treino",
+            "item3": "Fortalecer tendões e ligamentos (prevenção de lesões)",
+            "item4": "Promover a densidade óssea (essencial para longevidade desportiva)",
+            "item5": "Acompanhar resultados reais com dados objetivos e relatórios de performance"
+        },
+        "edge": {
+            "badge": "O Diferencial",
+            "title_base": "Relatório de",
+            "title_highlight": "Alta Performance",
+            "text": "Treine com precisão. Meça o que importa. Eleve o seu desempenho.",
+            "desc": "Alta performance não é apenas sobre quão forte você é, mas sobre quão bem você recupera e mantém a simetria.",
+            "item1_title": "Avaliação Neuromuscular",
+            "item1_desc": "Capacidade máxima de força neuromuscular.",
+            "item2_title": "Controlo de Recuperação",
+            "item2_desc": "Monitorização de simetria e fadiga.",
+            "validation_badge": "Sistema Validado por Atletas de Elite"
+        },
+        "cta_text": "Pronto para substituir suposições por dados de alta precisão? Junte-se à elite da performance.",
+        "expert": {
+            "title": "Conheça o",
+            "highlight": "Dr. Andrew Hatch",
+            "subtitle": "Fundador e Diretor Clínico",
+            "clinical_nav": "Direção Clínica & Inovação",
+            "nav_label": "Dr. Hatch",
+            "description": "Com mais de 30 anos de experiência clínica e 20.000 pacientes tratados, o Dr. Andrew Hatch fundou o Ósseo+ para integrar a biomecânica de precisão e a fisiologia da longevidade. A sua missão é transformar os dados em resultados, permitindo que cada atleta — profissional ou recreativo — alcance o seu potencial máximo de forma segura e científica."
+        }
+    }
+}

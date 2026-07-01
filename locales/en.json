@@ -1,0 +1,431 @@
+{
+    "common": {
+        "home": "Home",
+        "about_us": "About Us",
+        "services": "Services",
+        "plans": "Plans",
+        "contact": "Contact",
+        "contact_us": "Contact Us",
+        "see_plans": "See Plans",
+        "faq": "FAQ",
+        "whatsapp_message": "Hello! I'd like to know more about the Ósseo+ method.",
+        "all_rights_reserved": "All rights reserved.",
+        "subscribe_now": "Subscribe Now",
+        "request_quote": "Request Quote",
+        "book_assessment": "Book Assessment",
+        "learn_more": "Learn More",
+        "terms": "Terms of Use",
+        "privacy": "Privacy Policy",
+        "complaints_book": "Complaints Book",
+        "performance": "Performance",
+        "get_started": "Start Journey"
+    },
+    "navbar": {
+        "slogan": "Elite Bone Health and Biomechanics"
+    },
+    "home": {
+        "hero": {
+            "badge": "The Future of Longevity",
+            "title_base": "Transform your health with the ",
+            "title_highlight": "Ósseo+",
+            "title_suffix": " method",
+            "description": "A revolutionary approach to longevity, focused on bone health, strength, and balance through elite biomechanical technology.",
+            "cta_start": "Start Journey",
+            "cta_appointment": "Schedule Evaluation"
+        },
+        "pillars": {
+            "title": "Our Performance Pillars",
+            "subtitle": "An integrated approach to maximize your physical and bone potential.",
+            "balance": {
+                "title": "Balance",
+                "item1": "Advanced proprioceptive training",
+                "item2": "Active fall prevention",
+                "item3": "Dynamic postural stability",
+                "systems": "Systems: Vestibular, Somatosensory, and Visual"
+            },
+            "strength": {
+                "title": "Strength",
+                "item1": "Functional muscle development",
+                "item2": "Power and endurance",
+                "item3": "Metabolic optimization"
+            },
+            "bone_health": {
+                "title": "Bone",
+                "item1": "Increased mineral density",
+                "item2": "Osteogenic Loading",
+                "item3": "Long-term skeletal health"
+            }
+        },
+        "features": {
+            "title": "Why Ósseo+?",
+            "description_base": "We use ",
+            "description_rev": "revolutionary ",
+            "description_comp": "technology that combines ",
+            "description_bone": "osteogenic loading ",
+            "description_strength": "and high-precision strength training.",
+            "item1_title": "Digital Evaluation",
+            "item1_desc": "Complete biomechanical analysis of your current physical state.",
+            "item2_title": "Safe Training",
+            "item2_desc": "Safe and effective stimulus for bone strengthening.",
+            "item3_title": "Short Sessions",
+            "item3_desc": "Only 15-20 minutes per week for real results.",
+            "item4_title": "Real Evolution",
+            "item4_desc": "Constant monitoring of your skeletal progress."
+        },
+        "cta": {
+            "title": "Ready to invest in your future health?"
+        },
+        "quote": {
+            "text": "Muscle is not just a matter of fitness. It is the organ of longevity.",
+            "author": "Ósseo+"
+        },
+        "did_you_know": {
+            "title": "Did you know?",
+            "stat1": "1 in 3 women and 1 in 5 men over 50 will suffer an osteoporotic fracture.",
+            "stat2": "8.9 million fractures occur annually — one every 3 seconds.",
+            "highlight": "Osteoporosis is a silent epidemic."
+        }
+    },
+    "about": {
+        "hero": {
+            "badge": "Our Mission",
+            "title_base": "Redefining the limits of",
+            "title_suffix": "healthy ",
+            "title_highlight": "aging",
+            "description": "Ósseo+ was born from the need to offer a scientific and technological solution for the preservation of autonomy and vitality throughout life."
+        },
+        "history": {
+            "title": "Our Journey",
+            "item1": {
+                "year": "2018",
+                "description": "Founded with a focus on clinical physiology and biomechanics."
+            },
+            "item2": {
+                "year": "2020",
+                "description": "Integration of advanced osteogenic loading protocols."
+            },
+            "item3": {
+                "year": "Today",
+                "description": "National reference in longevity and skeletal health."
+            }
+        },
+        "team": {
+            "badge": "Specialists",
+            "title": "Clinical Leadership",
+            "specialist": {
+                "name": "Dr. Andrew P. Hatch",
+                "role": "Founder & Clinical Director",
+                "bio_p1": "With over 30 years of experience in chiropractic care, I've dedicated my career to understanding and treating musculoskeletal challenges across all age groups. Having treated more than 20,000 patients, my focus has been on conditions such as neck and back pain, herniated discs, migraines, dizziness, poor posture, and degenerative spine disorders.",
+                "bio_p2": "Recognizing the evolving needs of our aging population, I founded Ósseo+ to address and prevent conditions like sarcopenia and osteoporosis. Our mission is to promote healthy aging by enhancing muscle strength, bone density, and reducing the risk of falls, fractures, and metabolic complications.",
+                "bio_p4": "I'm actively seeking collaborations with medical researchers to validate and expand upon our methodologies at Ósseo+. Additionally, I'm building a referral network within the Portuguese medical community to foster interdisciplinary approaches to patient care."
+            }
+        }
+    },
+    "services": {
+        "hero": {
+            "badge": "Elite Methodology",
+            "title_base": "Science and Technology at the service of your ",
+            "title_highlight": "Body",
+            "description": "Our method integrates the three fundamental pillars of human physical integrity: Bone, Strength, and Balance."
+        },
+        "pillars": {
+            "p1": {
+                "title": "Bone Pillar",
+                "desc": "Skeletal stimulus through controlled osteogenic loading.",
+                "list1": "Increased bone density",
+                "list2": "Osteoporosis prevention"
+            },
+            "p2": {
+                "title": "Strength Pillar",
+                "desc": "Muscle development focused on functionality and longevity.",
+                "list1": "Functional hypertrophy",
+                "list2": "Joint protection"
+            },
+            "p3": {
+                "title": "Balance Pillar",
+                "desc": "Neurosensor training for stability and coordination.",
+                "list1": "Postural control",
+                "list2": "Fall prevention"
+            }
+        },
+        "tech": {
+            "badge": "Technology",
+            "title": "High-Precision Equipment",
+            "subtitle": "We use the most advanced tools on the market to ensure safe and measurable results.",
+            "item1_title": "Bone Stimulus",
+            "item1_desc": "Safe and monitored bone stimulation.",
+            "item2_title": "Better Balance",
+            "item2_desc": "Digital balance analysis and training.",
+            "item3_title": "ISO-Control",
+            "item3_desc": "Real-time isometric strength monitoring.",
+            "item4_title": "Body Composition",
+            "item4_desc": "Detailed analysis of lean mass and density.",
+            "monitor_badge": "Real-Time Tracking",
+            "monitor_title": "Biomechanical Monitoring",
+            "monitor_desc": "Instant visual feedback to ensure perfect form and ideal stimulus."
+        },
+        "science": {
+            "title": "Our Science",
+            "subtitle": "Scientific foundation behind the Ósseo+ method.",
+            "wolff_law": {
+                "title": "Wolff's Law",
+                "desc": "Bone architecture and density adapt to the mechanical stress applied to it. Bone is a dynamic tissue that responds to stimulus."
+            },
+            "osteogenic": {
+                "title": "Osteogenic Loading",
+                "desc": "The most effective method for stimulating the formation of new bone tissue, far exceeding low-impact activities like walking or vibration."
+            },
+            "longevity": {
+                "title": "Organ of Longevity",
+                "desc": "Muscle plays a critical role in metabolic health and the preservation of bone density over the years."
+            }
+        },
+        "athletes_promo": {
+            "badge": "FOR ATHLETES",
+            "title": "Elite Performance Analysis",
+            "description": "Unlock your maximum potential with our dedicated precision system for high-performance athletes.",
+            "cta": "Explore Ósseo+ Performance"
+        }
+    },
+    "plans": {
+        "hero_title": "Choose your path to Longevity",
+        "hero_subtitle": "Personalized plans designed for your specific needs and health goals.",
+        "p1": {
+            "title": "1st Evaluation",
+            "subtitle": "The First Step to Your Well-Being",
+            "desc": "At Ósseo+, we know that every body is unique and deserves specialized attention. Our 1.ª Evaluation allows us to understand your condition, identify possible imbalances and define the best plan to relieve muscular, bone or joint pain.",
+            "price_info": "For new clients, this evaluation has a cost of 55€. However, for those who are already clients of Global Wellness, the service is free.",
+            "footer": "Prioritize your health. Book your evaluation now and start the path to a pain-free life!"
+        },
+        "p2": {
+            "title": "Balance Therapy",
+            "subtitle": "Take Full Care of Your Body",
+            "desc": "Balance Therapy was developed to help restore well-being, relieve muscle and joint pain, and improve your quality of life. With personalized support, this approach promotes body alignment and effective relief of discomfort.",
+            "pack1": "12 sessions for 330€ – includes 1 free session",
+            "pack2": "24 sessions for 630€ – includes 3 free sessions",
+            "footer": "Invest in your health and well-being with continuous and effective treatment. Book your sessions now and feel the difference!"
+        },
+        "p3": {
+            "title": "Ósseo + Balance Therapy",
+            "subtitle": "The Best Care for Your Body",
+            "desc": "Ósseo + Balance Therapy combines specialized techniques to restore body balance, relieve bone and muscle pain, and promote global well-being. With continuous monitoring, this therapy helps improve mobility, reduce discomfort and prevent future complications.",
+            "pack1": "12 sessions for 275€ – includes 1 free session",
+            "pack2": "24 sessions for 525€ – includes 3 free sessions",
+            "footer": "Give your body the care it deserves. Book your sessions now and recover your well-being!"
+        },
+        "agendar": "BOOK APPOINTMENT",
+        "saiba_mais": "Learn More",
+        "athletes_promo": {
+            "title": "Performance Assessment for Athletes",
+            "subtitle": "Discover your maximum force output and baseline profile.",
+            "cta": "See Athlete Plans"
+        }
+    },
+    "contact": {
+        "title": "Start your Transformation",
+        "subtitle": "We are here to clear all your doubts and help you on your journey.",
+        "form_title": "Send a Message",
+        "name": "Name",
+        "email": "Email",
+        "subject": "Subject",
+        "message": "Message",
+        "form": {
+            "name_placeholder": "Your full name",
+            "email_placeholder": "your-email@example.com",
+            "message_placeholder": "How can we help?"
+        },
+        "send": "Send Message",
+        "info_title": "Contact Information",
+        "address_label": "Address",
+        "phone_label": "Phone",
+        "email_label": "Email",
+        "hours_label": "Business Hours",
+        "location": "Our Location"
+    },
+    "faq": {
+        "title": "Common Questions",
+        "subtitle": "Find quick answers to the most common questions about our method.",
+        "q1": "Is training safe for people with osteoporosis?",
+        "a1": "Yes, it is extremely safe. Our method was designed precisely to stimulate the bone in a controlled way, without the impact or risk of conventional physical activities.",
+        "q2": "How long is each session?",
+        "a2": "Sessions are short and efficient, lasting between 15 to 20 minutes. The focus is on the intensity and quality of the stimulus, not the duration.",
+        "q3": "How often should I train?",
+        "a3": "For most bone health protocols, one weekly session is sufficient to generate the necessary stimuli for skeletal remineralization.",
+        "q4": "Do I need to wear gym clothes?",
+        "a4": "You can come in your normal everyday clothes, as long as they are comfortable. Since we don't sweat significantly during the stimulus, sports clothing is not mandatory."
+    },
+    "footer": {
+        "about_desc": "Dedicated to transforming lives through bone health and biomechanics. Elite technology for your well-being.",
+        "quick_links": "Quick Links",
+        "connect": "Connect",
+        "whatsapp_btn": "Talk on WhatsApp",
+        "developed_by": "Developed by"
+    },
+    "loader": {
+        "loading": "Loading health...",
+        "welcome": "Welcome"
+    },
+    "terms": {
+        "title": "Terms of Use",
+        "subtitle": "Please read carefully the terms and conditions of use for our website and services.",
+        "last_updated": "Last updated: February 2026",
+        "acceptance": {
+            "title": "Acceptance of Terms",
+            "content": "By accessing and using the Ósseo+ website, you agree to comply with and be bound by the following terms and conditions of use. If you do not agree with any part of these terms, you must not use our website."
+        },
+        "services": {
+            "title": "Description of Services",
+            "content": "Ósseo+ provides information on bone health and biomechanical training services. We reserve the right to modify, suspend, or discontinue any aspect of our services at any time."
+        },
+        "medical": {
+            "title": "Medical Disclaimer",
+            "content": "The content of this website is intended for informational purposes only and does not constitute medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition."
+        },
+        "User_responsibilities": {
+            "title": "User Responsibilities",
+            "content": "You agree to use the website only for lawful purposes and in a way that does not infringe the rights of, restrict or inhibit anyone else's use and enjoyment of the website."
+        },
+        "intellectual_property": {
+            "title": "Intellectual Property",
+            "content": "All content on this website, including text, graphics, logos, and images, is the property of Ósseo+ or its content suppliers and is protected by copyright laws."
+        },
+        "changes": {
+            "title": "Changes to Terms",
+            "content": "Ósseo+ reserves the right to change these terms at any time. Your continued use of the website following such changes will constitute your acceptance of the new terms."
+        },
+        "contact": {
+            "title": "Contact",
+            "content": "For any questions regarding these terms, please contact us at ola@osseo.pt."
+        }
+    },
+    "privacy": {
+        "title": "Privacy Policy",
+        "subtitle": "Your privacy is important to us. Learn how we collect, use, and protect your data.",
+        "last_updated": "Last updated: February 2026",
+        "collection": {
+            "title": "Data Collection",
+            "content": "We collect information you provide directly to us, such as when you fill out a contact form or subscribe to our newsletter. This data may include your name, email address, and phone number."
+        },
+        "usage": {
+            "title": "Use of Information",
+            "content": "We use the collected information to provide, maintain and improve our services, respond to your requests, and send relevant communications about Ósseo+."
+        },
+        "cookies": {
+            "title": "Cookies",
+            "content": "We use cookies to improve your browsing experience and analyze website traffic. You can control the use of cookies through your browser settings."
+        },
+        "sharing": {
+            "title": "Data Sharing",
+            "content": "We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except when necessary to provide our services or comply with the law."
+        },
+        "security": {
+            "title": "Security",
+            "content": "We implement security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction."
+        },
+        "rights": {
+            "title": "Your Rights",
+            "content": "Under GDPR, you have the right to access, rectify, port and delete your personal data. To exercise these rights, please contact us."
+        },
+        "contact": {
+            "title": "Contact",
+            "content": "If you have questions about this Privacy Policy, please contact us at ola@osseo.pt."
+        }
+    },
+    "cookies": {
+        "title": "We use Cookies",
+        "description": "This site uses cookies to ensure you get the best experience on our platform.",
+        "accept": "Accept",
+        "decline": "Decline",
+        "privacy_link": "Read Privacy Policy"
+    },
+    "performance": {
+        "hero": {
+            "badge": "Ósseo+ Performance",
+            "title": "Measure. Performance. Improve. Perform.",
+            "subtitle": "Ósseo+ Performance is a precision-based strength and performance system designed for athletes who want measurable results—not guesswork.",
+            "description": "Ósseo+ Performance is a precision-based strength and performance system designed for athletes who want measurable results—not guesswork.",
+            "scroll": "Scroll"
+        },
+        "nav": {
+            "hero": "Performance",
+            "precision": "Technology",
+            "assessment": "Investment",
+            "advantages": "Advantages",
+            "report": "Reports",
+            "expert": "Dr. Hatch",
+            "cta": "Start"
+        },
+        "intro": {
+            "title": "Precision over",
+            "highlight": "Guesswork.",
+            "text": "Using advanced isometric technology, we assess your maximum force output and track your neuromuscular performance over time. This allows you to train smarter, monitor progress objectively, and enhance both performance and resilience.",
+            "data_label": "Objective Data",
+            "guess_label": "Guesswork",
+            "live_badge": "Live Assessment",
+            "live_desc": "3D Composition & Force Output Analysis"
+        },
+        "get": {
+            "title": "Your Advantage",
+            "assessment": {
+                "title": "Initial Performance Assessment",
+                "price": "145€",
+                "subtitle": "Your starting point for measurable improvement.",
+                "includes_title": "Includes:",
+                "item1": "3D Body Composition Scan",
+                "item2": "Bone Density Assessment",
+                "item3": "Biomechanical Evaluation",
+                "item4": "Personalized machine setup",
+                "item5_title": "Maximum force testing (5–6 key movements):",
+                "move1": "Vertical Lift",
+                "move2": "Shoulder Shrug",
+                "move3": "Leg Press",
+                "move4": "Chest Press",
+                "move5": "Core Pull/Crunch",
+                "move6": "Seated Row",
+                "benefit1": "Establish your baseline strength profile and identify performance gaps",
+                "benefit2": "Receive a detailed performance report with your results and key insights"
+            },
+            "sessions": {
+                "title": "Ongoing Sessions",
+                "price": "€30",
+                "subtitle": "Reassess, train, and track your evolution.",
+                "item1": "Force reassessment + neuromuscular training",
+                "item2": "Objective monitoring of evolution over time",
+                "item3": "Performance report after every session to track gains and trends",
+                "freq_title": "Flexible frequency:",
+                "freq1": "Weekly (optimal for performance and bone density)",
+                "freq2": "Bi-weekly",
+                "freq3": "Monthly"
+            }
+        },
+        "why": {
+            "title": "Why Athletes Choose Ósseo+ Performance",
+            "item1": "Increase maximum force output",
+            "item2": "Improve load capacity and training resilience",
+            "item3": "Strengthen tendons and ligaments (injury prevention)",
+            "item4": "Promote bone density (essential for athletic longevity)",
+            "item5": "Track real results with objective data and performance reports"
+        },
+        "edge": {
+            "badge": "The Edge",
+            "title_base": "Report of",
+            "title_highlight": "High Performance",
+            "text": "Train with precision. Measure what matters. Elevate your performance.",
+            "desc": "High performance is not just about how strong you are, but about how well you recover and maintain symmetry.",
+            "item1_title": "Neuro-Assessment",
+            "item1_desc": "Maximum neuromuscular force capacity.",
+            "item2_title": "Recovery Tracking",
+            "item2_desc": "Symmetry and fatigue monitoring.",
+            "validation_badge": "System Validated by Elite Athletes"
+        },
+        "cta_text": "Ready to replace guesswork with high-precision data? Join the performance elite.",
+        "expert": {
+            "title": "Meet",
+            "highlight": "Dr. Andrew Hatch",
+            "subtitle": "Founder & Clinical Director",
+            "clinical_nav": "Clinical Direction & Innovation",
+            "nav_label": "Dr. Hatch",
+            "description": "With over 30 years of clinical experience and 20,000 patients treated, Dr. Andrew Hatch founded Ósseo+ to integrate precision biomechanics and longevity physiology. His mission is to transform data into results, allowing every athlete — professional or recreational — to reach their maximum potential safely and scientifically."
+        }
+    }
+}
