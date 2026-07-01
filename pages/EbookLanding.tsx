@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, CheckCircle, Loader2 } from 'lucide-react';
 import { subscribeToEbook } from '../services/brevo';
@@ -57,6 +58,16 @@ export default function EbookLanding() {
   const [errorMessage, setErrorMessage] = useState('');
   const [visibleChapters, setVisibleChapters] = useState<Set<number>>(new Set());
   const chapterRefs = useRef<(HTMLLIElement | null)[]>([]);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (status === 'success') {
+      const timer = setTimeout(() => {
+        navigate('/');
+      }, 4000);
+      return () => clearTimeout(timer);
+    }
+  }, [status, navigate]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -279,7 +290,7 @@ export default function EbookLanding() {
                   <CheckCircle className="text-[#085C68] w-6 h-6" strokeWidth={2} />
                 </div>
                 <h3 className="font-display text-4xl font-bold leading-tight mb-5">
-                  Acesso<br />Confirmado.
+                  Obrigado!
                 </h3>
                 <p className="font-body text-white/70 font-light leading-relaxed mb-8 text-sm">
                   O guia <strong className="text-white">Living Bone, Living Strong</strong> foi
@@ -287,10 +298,10 @@ export default function EbookLanding() {
                   caixa de entrada.
                 </p>
                 <button
-                  onClick={() => { setStatus('idle'); setName(''); setEmail(''); }}
+                  onClick={() => navigate('/')}
                   className="font-display text-xs tracking-[0.2em] uppercase text-white/60 hover:text-white transition-colors flex items-center gap-2 font-medium"
                 >
-                  Voltar <ArrowRight size={12} />
+                  Ir para a página principal <ArrowRight size={12} />
                 </button>
               </div>
             ) : (
