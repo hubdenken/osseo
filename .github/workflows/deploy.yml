@@ -1,16 +1,16 @@
-name: Build & Deploy to Hostinger
+name: Build & Push to Source Branch
 
 on:
   push:
     branches: [main]
-
-  # Allow manual trigger from GitHub UI
   workflow_dispatch:
 
 jobs:
   deploy:
-    name: Build & Deploy
+    name: Build & Push
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # Permissão necessária para fazer push para outra branch
 
     steps:
       - name: Checkout code
@@ -30,12 +30,11 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
-      - name: Deploy to Hostinger via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      - name: Push to source branch for Hostinger Webhook
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./dist/
-          server-dir: public_html/
-          dangerous-clean-slate: false
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          publish_branch: source
+          force_orphan: true
+          commit_message: "🚀 Deploy to Hostinger via Webhook"
