@@ -36,5 +36,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           publish_branch: source
-          force_orphan: true
           commit_message: "🚀 Deploy to Hostinger via Webhook"
