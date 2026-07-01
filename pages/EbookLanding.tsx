@@ -60,14 +60,7 @@ export default function EbookLanding() {
   const chapterRefs = useRef<(HTMLLIElement | null)[]>([]);
   const navigate = useNavigate();
 
-  useEffect(() => {
-    if (status === 'success') {
-      const timer = setTimeout(() => {
-        navigate('/');
-      }, 4000);
-      return () => clearTimeout(timer);
-    }
-  }, [status, navigate]);
+  // Redirect effect removed so user has time to download PDF
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -293,16 +286,27 @@ export default function EbookLanding() {
                   Obrigado!
                 </h3>
                 <p className="font-body text-white/70 font-light leading-relaxed mb-8 text-sm">
-                  O guia <strong className="text-white">Living Bone, Living Strong</strong> foi
-                  enviado para <strong className="text-white">{email}</strong>. Verifique a sua
-                  caixa de entrada.
+                  A sua inscrição foi confirmada. Clique no botão abaixo para descarregar o seu Ebook imediatamente.
                 </p>
-                <button
-                  onClick={() => navigate('/')}
-                  className="font-display text-xs tracking-[0.2em] uppercase text-white/60 hover:text-white transition-colors flex items-center gap-2 font-medium"
-                >
-                  Ir para a página principal <ArrowRight size={12} />
-                </button>
+                <div className="space-y-4">
+                  <a
+                    href="/osseo-ebook.pdf"
+                    download="OSSEO_Living_Bone_Living_Strong.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full bg-white text-[#085C68] hover:bg-surface-light py-5 flex items-center justify-center gap-4 transition-colors duration-200 shadow-xl"
+                  >
+                    <span className="font-display text-xs uppercase font-bold tracking-[0.15em]">
+                      Descarregar PDF Agora
+                    </span>
+                  </a>
+                  <button
+                    onClick={() => navigate('/')}
+                    className="w-full font-display text-xs tracking-[0.2em] uppercase text-white/60 hover:text-white transition-colors flex items-center justify-center gap-2 py-3"
+                  >
+                    Ir para a página principal <ArrowRight size={12} />
+                  </button>
+                </div>
               </div>
             ) : (
               <div key="form">
