@@ -1,28 +1,93 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, CheckCircle, Loader2 } from 'lucide-react';
 import { subscribeToEbook } from '../services/brevo';
+
+// --- Data from actual Ebook analysis ---
+const CHAPTERS = [
+  {
+    num: '01',
+    title: 'O osso que vive',
+    subtitle: 'Reframing the Biology',
+    desc: 'O osso não é giz. É um dos tecidos mais metabolicamente ativos do corpo humano — constantemente a ser destruído e reconstruído, respondendo a sinais mecânicos e hormonais.',
+  },
+  {
+    num: '02',
+    title: 'A epidemia silenciosa',
+    subtitle: 'The Epidemic in Numbers',
+    desc: '"1 em cada 2 mulheres e 1 em cada 4 homens com mais de 50 anos vão partir um osso devido à osteoporose." — Fundação Internacional de Osteoporose',
+  },
+  {
+    num: '03',
+    title: 'Sarcopenia & longevidade',
+    subtitle: 'Muscle: The Organ of Longevity',
+    desc: 'A massa muscular é o mais poderoso preditor de mortalidade. O músculo não é apenas mecânico — é um órgão endócrino que regula a imunidade, a cognição e a sobrevivência ao cancro.',
+  },
+  {
+    num: '04',
+    title: 'A ciência do carregamento osteogénico',
+    subtitle: 'How Bone Responds to Force',
+    desc: 'Estímulo breve e de alta intensidade é o sinal ótimo para o crescimento ósseo. A Osseo+ aplica forças axiais em ângulos articulares seguros, ultrapassando o limiar osteogénico sem risco.',
+  },
+  {
+    num: '05',
+    title: 'Casos reais, resultados reais',
+    subtitle: 'Osseo+ Case Studies',
+    desc: 'Maria, 74 anos. António, 79. Helena, 82. Sofia, 50 — Osteopenia revertida para normal. Sete casos documentados com dados DEXA antes e depois.',
+  },
+  {
+    num: '06',
+    title: 'Guia prático diário',
+    subtitle: 'Daily Habits for Stronger Bones',
+    desc: 'Nutrição (Vitamina D, K2, Proteína, Magnésio), movimento contra a gravidade, treino de força — tudo o que implementar imediatamente para começar a construir osso hoje.',
+  },
+];
+
+const STATS = [
+  { value: '1 em 2', label: 'mulheres com +50 anos vai partir um osso' },
+  { value: '10,5%', label: 'de produtividade perdida por condições músculo-esqueléticas' },
+  { value: '7', label: 'casos clínicos documentados com DEXA scan' },
+  { value: '777 kg', label: 'leg press pessoal do Dr. Hatch — começou nos 450 kg' },
+];
 
 export default function EbookLanding() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
+  const [visibleChapters, setVisibleChapters] = useState<Set<number>>(new Set());
+  const chapterRefs = useRef<(HTMLLIElement | null)[]>([]);
 
-  // Scroll to top on mount
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
+  // Intersection Observer for scroll-triggered animations
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const idx = Number((entry.target as HTMLElement).dataset.idx);
+            setVisibleChapters((prev) => new Set(prev).add(idx));
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+    chapterRefs.current.forEach((el) => el && observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+
+  const scrollToForm = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!name || !email) return;
-
     setStatus('loading');
-    
-    // Simulate or call Brevo
     const result = await subscribeToEbook(name, email);
-    
     if (result.success) {
       setStatus('success');
     } else {
@@ -34,151 +99,314 @@ export default function EbookLanding() {
   return (
     <>
       <Helmet>
-        <title>O Guia Definitivo da Saúde Articular | Ósseo+</title>
-        <meta name="description" content="Descubra a ciência por trás do movimento sem dor. Descarregue o nosso Ebook gratuito e aprenda como proteger as suas articulações hoje." />
+        <title>Living Bone, Living Strong | Guia Científico Gratuito — Ósseo+</title>
+        <meta
+          name="description"
+          content="O estudo clínico completo do Prof. Dr. Andrew P. Hatch sobre osteoporose, sarcopenia e carregamento osteogénico. 18 capítulos. 7 casos reais. Baseado em evidência."
+        />
         <meta name="robots" content="index, follow" />
       </Helmet>
 
-      <div className="min-h-screen bg-[#F5F5F0] text-[#111111] font-sans selection:bg-[#0055FF] selection:text-white flex flex-col md:flex-row">
-        
-        {/* LEFT COLUMN: Content (Scrollable) */}
-        <div className="w-full md:w-7/12 lg:w-8/12 p-8 md:p-16 lg:p-24 overflow-y-auto order-2 md:order-1 relative">
-          
-          <div className="max-w-3xl mx-auto">
-            <header className="mb-24">
-              <span className="inline-block uppercase tracking-[0.2em] text-xs font-bold border border-[#111] px-4 py-2 mb-8">
-                Estudo Exclusivo &middot; 2026
-              </span>
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif leading-[0.9] tracking-tight mb-8">
-                A CIÊNCIA<br/>
-                <span className="italic font-light text-[#0055FF]">DO MOVIMENTO.</span>
+      <div className="min-h-screen bg-surface-light text-secondary font-body flex flex-col md:flex-row">
+
+        {/* ── LEFT: Scrollable Content ── */}
+        <div className="w-full md:w-[58%] lg:w-[62%] overflow-y-auto order-2 md:order-1 relative">
+
+          {/* Top bar */}
+          <div className="border-b border-secondary/15 px-8 md:px-16 py-5 flex items-center justify-between">
+            <span className="font-display text-xs tracking-[0.25em] uppercase font-semibold text-primary">
+              Ósseo+ Research · 2026
+            </span>
+            <span className="font-display text-xs tracking-[0.2em] uppercase text-secondary/40 font-medium">
+              Estudo Clínico
+            </span>
+          </div>
+
+          <div className="px-8 md:px-16 lg:px-20">
+
+            {/* Hero Typography */}
+            <header className="pt-16 pb-20 border-b border-secondary/10">
+              <p className="font-display text-xs tracking-[0.25em] uppercase mb-6 text-secondary/50 font-medium">
+                Prof. Dr. Andrew P. Hatch DC, PhD
+              </p>
+              <h1 className="font-display text-5xl md:text-7xl lg:text-8xl leading-[0.9] tracking-tight mb-8 font-bold">
+                A CIÊNCIA<br />
+                <span className="italic font-light text-primary">DO MOVIMENTO.</span>
               </h1>
-              <p className="text-xl md:text-2xl font-light leading-relaxed max-w-xl text-[#333]">
-                Descubra por que as articulações envelhecem mais rápido do que nós e as estratégias clínicas para reverter o desgaste.
+              <p className="font-body text-lg md:text-xl leading-relaxed max-w-xl text-secondary/70 font-light">
+                A perda óssea não é uma doença. É descondicionamento. E qualquer tecido que pode
+                ser descondicionado pode, nas condições certas, ser recondicionado.
               </p>
             </header>
 
-            {/* Editorial Image Block */}
-            <div className="relative mb-24 group">
-              <div className="absolute inset-0 bg-[#0055FF] mix-blend-multiply opacity-0 group-hover:opacity-20 transition-opacity duration-700 z-10"></div>
-              <img 
-                src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" 
-                alt="Pessoa em movimento fluído" 
-                className="w-full h-[60vh] object-cover grayscale contrast-125"
-              />
-              <p className="mt-4 text-sm font-mono uppercase tracking-widest text-right">Fig 1. Biomecânica Humana</p>
+            {/* Stats row */}
+            <section className="py-16 border-b border-secondary/10 grid grid-cols-2 gap-x-8 gap-y-10">
+              {STATS.map((stat, i) => (
+                <div key={i}>
+                  <p className="font-display text-4xl md:text-5xl font-bold leading-none mb-2 tracking-tight text-primary">
+                    {stat.value}
+                  </p>
+                  <p className="font-body text-sm text-secondary/60 leading-snug font-light">
+                    {stat.label}
+                  </p>
+                </div>
+              ))}
+            </section>
+
+            {/* Mobile CTA 1 */}
+            <div className="md:hidden py-10 border-b border-secondary/10">
+              <button
+                onClick={scrollToForm}
+                className="w-full bg-[#085C68] text-white active:bg-[#064a54] py-5 flex items-center justify-center gap-4 transition-colors duration-200 shadow-xl"
+                style={{ borderRadius: 0 }}
+              >
+                <span className="font-display text-xs uppercase font-bold tracking-[0.15em]">
+                  Receber Acesso
+                </span>
+                <ArrowRight strokeWidth={2} size={16} />
+              </button>
             </div>
 
-            <section className="mb-24">
-              <h2 className="text-3xl md:text-5xl font-serif mb-12">O que vai aprender neste manifesto.</h2>
-              
-              <ul className="space-y-8">
-                {[
-                  { title: "A Fisiologia do Desgaste", desc: "Compreender os três estágios de degradação da cartilagem e como identificar sinais invisíveis." },
-                  { title: "Nutrição Sinovial", desc: "Os componentes exatos (além da glucosamina) que provaram aumentar a densidade do fluido sinovial." },
-                  { title: "Mecânica de Recuperação", desc: "Protocolos de movimento testados para reduzir a inflamação mecânica em 72 horas." }
-                ].map((item, i) => (
-                  <li key={i} className="flex border-t border-[#111]/20 pt-8">
-                    <span className="font-mono text-xl mr-8 text-[#0055FF]">0{i + 1}</span>
+            {/* Author block */}
+            <section className="py-16 border-b border-secondary/10 flex gap-8 items-start">
+              <div className="flex-shrink-0 w-20 h-20 bg-primary flex items-center justify-center">
+                <span className="text-white text-2xl font-display font-bold">AH</span>
+              </div>
+              <div>
+                <p className="font-display text-xl font-bold mb-1">Prof. Dr. Andrew P. Hatch DC, PhD</p>
+                <p className="font-body text-sm text-secondary/60 leading-relaxed font-light">
+                  Quiroprático, investigador e fundador da Osseo+, Lisboa. Doutorado em doenças
+                  músculo-esqueléticas e o seu impacto na saúde das populações. O seu protocolo
+                  clínico reduziu a perda de produtividade por condições MSK de{' '}
+                  <strong className="font-semibold text-secondary">10,5% para 1,86%</strong> em seis meses.
+                </p>
+              </div>
+            </section>
+
+            {/* Quote */}
+            <section className="py-16 border-b border-secondary/10">
+              <blockquote className="font-display text-2xl md:text-3xl leading-snug italic font-light max-w-xl text-secondary/80">
+                "A medicina construiu um paradigma em torno de abrandar a deterioração. Este livro
+                é sobre estimular a regeneração."
+              </blockquote>
+              <p className="font-display mt-6 text-xs tracking-[0.2em] uppercase text-primary/70 font-medium">
+                — A.P. Hatch, Prefácio
+              </p>
+            </section>
+
+            {/* Chapter list */}
+            <section className="py-16 border-b border-secondary/10">
+              <p className="font-display text-xs tracking-[0.25em] uppercase mb-10 text-secondary/50 font-medium">
+                18 Capítulos · Índice Seleccionado
+              </p>
+              <ul className="space-y-0">
+                {CHAPTERS.map((ch, i) => (
+                  <li
+                    key={i}
+                    ref={(el) => { chapterRefs.current[i] = el; }}
+                    data-idx={i}
+                    className="border-t border-secondary/10 py-8 flex gap-6 transition-all duration-700"
+                    style={{
+                      opacity: visibleChapters.has(i) ? 1 : 0,
+                      transform: visibleChapters.has(i) ? 'translateY(0)' : 'translateY(24px)',
+                      transitionDelay: `${i * 60}ms`,
+                    }}
+                  >
+                    <span className="font-display text-3xl font-bold text-primary/25 flex-shrink-0 leading-none mt-1">
+                      {ch.num}
+                    </span>
                     <div>
-                      <h3 className="text-xl font-bold uppercase tracking-wide mb-2">{item.title}</h3>
-                      <p className="text-[#555] font-light leading-relaxed">{item.desc}</p>
+                      <p className="font-display text-xl font-bold leading-tight mb-1">{ch.title}</p>
+                      <p className="font-display text-xs tracking-[0.15em] uppercase text-secondary/35 mb-3 font-medium">
+                        {ch.subtitle}
+                      </p>
+                      <p className="font-body text-sm text-secondary/60 leading-relaxed font-light">
+                        {ch.desc}
+                      </p>
                     </div>
                   </li>
                 ))}
               </ul>
             </section>
-            
-            <div className="border-t-4 border-[#111] pt-12 pb-24">
-              <h3 className="text-2xl font-serif italic mb-6">"Não é sobre viver mais tempo, é sobre não se sentir preso no próprio corpo."</h3>
-              <p className="font-mono uppercase text-sm tracking-widest">— Ósseo+ Research Team</p>
+
+            {/* For whom */}
+            <section className="py-16">
+              <p className="font-display text-xs tracking-[0.25em] uppercase mb-8 text-secondary/50 font-medium">
+                Para quem é este guia?
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {[
+                  'Adultos com osteopenia ou osteoporose diagnosticada',
+                  'Atletas que querem maximizar a densidade óssea e muscular',
+                  'Médicos e fisioterapeutas à procura de evidência clínica',
+                  'Qualquer pessoa que recuse envelhecer em declínio',
+                ].map((item, i) => (
+                  <div key={i} className="border border-secondary/15 px-5 py-4 flex items-center gap-4">
+                    <div className="w-2 h-2 bg-primary flex-shrink-0" />
+                    <p className="font-body text-sm text-secondary/70 leading-snug">
+                      {item}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            {/* Mobile CTA 2 */}
+            <div className="md:hidden pb-16 pt-4">
+              <button
+                onClick={scrollToForm}
+                className="w-full bg-[#085C68] text-white active:bg-[#064a54] py-5 flex items-center justify-center gap-4 transition-colors duration-200 shadow-xl"
+                style={{ borderRadius: 0 }}
+              >
+                <span className="font-display text-xs uppercase font-bold tracking-[0.15em]">
+                  Descarregar O Estudo
+                </span>
+                <ArrowRight strokeWidth={2} size={16} />
+              </button>
             </div>
+
+            <div className="hidden md:block pb-24" />
           </div>
         </div>
 
-        {/* RIGHT COLUMN: Sticky Form */}
-        <div className="w-full md:w-5/12 lg:w-4/12 bg-[#111] text-white p-8 md:p-12 lg:p-16 flex flex-col justify-center order-1 md:order-2 md:sticky top-0 h-auto md:h-screen shadow-2xl">
-          
-          <div className="max-w-md mx-auto w-full">
+        {/* ── RIGHT: Sticky Form ── */}
+        <div className="w-full md:w-[42%] lg:w-[38%] bg-[#085C68] text-white flex flex-col justify-center order-1 md:order-2 md:sticky top-0 h-auto md:h-screen font-body">
+
+          <div className="px-8 md:px-10 lg:px-12 py-12 md:py-0 max-w-md mx-auto w-full">
             {status === 'success' ? (
-              <div className="animate-in fade-in zoom-in duration-500">
-                <div className="w-16 h-16 bg-[#0055FF] rounded-none flex items-center justify-center mb-8">
-                  <CheckCircle className="text-white w-8 h-8" strokeWidth={1.5} />
+              <div key="success" style={{ animation: 'ebookFadeIn 0.5s ease both' }}>
+                <div className="w-12 h-12 bg-white flex items-center justify-center mb-8">
+                  <CheckCircle className="text-[#085C68] w-6 h-6" strokeWidth={2} />
                 </div>
-                <h3 className="text-4xl font-serif mb-4">Acesso Liberado.</h3>
-                <p className="font-light text-[#AAA] leading-relaxed mb-8">
-                  O manifesto foi enviado para <strong>{email}</strong>. Verifique a sua caixa de entrada (e a pasta de spam, por segurança).
+                <h3 className="font-display text-4xl font-bold leading-tight mb-5">
+                  Acesso<br />Confirmado.
+                </h3>
+                <p className="font-body text-white/70 font-light leading-relaxed mb-8 text-sm">
+                  O guia <strong className="text-white">Living Bone, Living Strong</strong> foi
+                  enviado para <strong className="text-white">{email}</strong>. Verifique a sua
+                  caixa de entrada.
                 </p>
-                <button 
-                  onClick={() => setStatus('idle')}
-                  className="text-xs uppercase font-mono tracking-[0.2em] text-[#0055FF] hover:text-white transition-colors flex items-center gap-2"
+                <button
+                  onClick={() => { setStatus('idle'); setName(''); setEmail(''); }}
+                  className="font-display text-xs tracking-[0.2em] uppercase text-white/60 hover:text-white transition-colors flex items-center gap-2 font-medium"
                 >
-                  Voltar <ArrowRight size={14} />
+                  Voltar <ArrowRight size={12} />
                 </button>
               </div>
             ) : (
-              <div className="animate-in fade-in duration-500">
-                <h2 className="text-3xl md:text-4xl font-serif mb-4">Descarregar<br/>O Estudo.</h2>
-                <p className="text-[#888] font-light mb-12">Insira os seus dados para receber o PDF diretamente no email.</p>
-                
-                <form onSubmit={handleSubmit} className="space-y-6">
+              <div key="form">
+                {/* Badge */}
+                <span className="inline-block border border-white/20 text-white/50 font-display text-[10px] tracking-[0.25em] uppercase px-3 py-1.5 mb-8 font-medium">
+                  Estudo Exclusivo · 2026
+                </span>
+
+                <h2 className="font-display text-3xl md:text-4xl font-bold leading-[0.92] tracking-tight mb-4">
+                  Descarregar<br />
+                  <span className="italic font-light text-white/90">O estudo.</span>
+                </h2>
+
+                <p className="font-body text-white/50 font-light text-sm leading-relaxed mb-10">
+                  18 capítulos. 7 casos clínicos com DEXA scan. A ciência do
+                  carregamento osteogénico explicada para si.
+                </p>
+
+                <form onSubmit={handleSubmit} className="space-y-5">
+                  {/* Name */}
                   <div className="group">
-                    <label htmlFor="name" className="block text-xs uppercase font-mono tracking-widest text-[#666] mb-2 group-focus-within:text-white transition-colors">Primeiro Nome</label>
-                    <input 
-                      type="text" 
-                      id="name"
+                    <label
+                      htmlFor="ebook-name"
+                      className="block font-display text-[10px] tracking-[0.25em] uppercase text-white/30 mb-2 group-focus-within:text-white transition-colors font-medium"
+                    >
+                      Primeiro Nome
+                    </label>
+                    <input
+                      id="ebook-name"
+                      type="text"
                       required
                       disabled={status === 'loading'}
                       value={name}
                       onChange={(e) => setName(e.target.value)}
-                      className="w-full bg-transparent border-b border-[#333] py-3 text-lg focus:outline-none focus:border-[#0055FF] transition-colors rounded-none text-white placeholder-[#333]"
-                      placeholder="Ex: João"
+                      placeholder="ex: Maria"
+                      className="w-full bg-transparent border-b border-white/20 py-3 text-base text-white placeholder-white/40 focus:outline-none focus:border-white transition-colors font-body"
+                      style={{ borderRadius: 0 }}
                     />
                   </div>
-                  
+
+                  {/* Email */}
                   <div className="group">
-                    <label htmlFor="email" className="block text-xs uppercase font-mono tracking-widest text-[#666] mb-2 group-focus-within:text-white transition-colors">Email Profissional</label>
-                    <input 
-                      type="email" 
-                      id="email"
+                    <label
+                      htmlFor="ebook-email"
+                      className="block font-display text-[10px] tracking-[0.25em] uppercase text-white/30 mb-2 group-focus-within:text-white transition-colors font-medium"
+                    >
+                      Email
+                    </label>
+                    <input
+                      id="ebook-email"
+                      type="email"
                       required
                       disabled={status === 'loading'}
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="w-full bg-transparent border-b border-[#333] py-3 text-lg focus:outline-none focus:border-[#0055FF] transition-colors rounded-none text-white placeholder-[#333]"
-                      placeholder="joao@exemplo.com"
+                      placeholder="maria@exemplo.com"
+                      className="w-full bg-transparent border-b border-white/20 py-3 text-base text-white placeholder-white/40 focus:outline-none focus:border-white transition-colors font-body"
+                      style={{ borderRadius: 0 }}
                     />
                   </div>
 
                   {status === 'error' && (
-                    <p className="text-red-500 text-sm font-light mt-2 border-l-2 border-red-500 pl-3">{errorMessage}</p>
+                    <p className="text-red-400 text-xs font-light border-l border-red-500 pl-3 font-body">
+                      {errorMessage}
+                    </p>
                   )}
 
-                  <button 
-                    type="submit" 
+                  <button
+                    type="submit"
                     disabled={status === 'loading'}
-                    className="w-full bg-white text-[#111] hover:bg-[#0055FF] hover:text-white py-5 mt-8 flex items-center justify-center gap-4 group transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full bg-white text-[#085C68] hover:bg-surface-light py-5 mt-6 flex items-center justify-center gap-4 group transition-colors duration-200 disabled:opacity-40 disabled:cursor-not-allowed"
+                    style={{ borderRadius: 0 }}
                   >
-                    <span className="uppercase font-bold tracking-[0.15em] text-sm">
+                    <span className="font-display text-xs uppercase font-bold tracking-[0.15em]">
                       {status === 'loading' ? 'A Processar...' : 'Receber Acesso'}
                     </span>
                     {status === 'loading' ? (
-                      <Loader2 className="animate-spin" size={18} />
+                      <Loader2 className="animate-spin" size={16} />
                     ) : (
-                      <ArrowRight className="group-hover:translate-x-2 transition-transform duration-300" strokeWidth={2} size={18} />
+                      <ArrowRight
+                        className="group-hover:translate-x-1 transition-transform duration-200"
+                        strokeWidth={2}
+                        size={16}
+                      />
                     )}
                   </button>
                 </form>
-                
-                <p className="text-[#555] text-xs font-light mt-8 text-center">
-                  Os seus dados estão seguros. Ao submeter, concorda com os nossos <a href="/terms" target="_blank" rel="noopener noreferrer" className="underline hover:text-white transition-colors">termos e condições</a>.
+
+                <p className="font-body text-white/30 text-[10px] font-light mt-6 text-center leading-relaxed">
+                  Dados protegidos. Ao submeter, concorda com os nossos{' '}
+                  <a
+                    href="/terms"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline hover:text-white transition-colors"
+                  >
+                    termos e condições
+                  </a>.
                 </p>
               </div>
             )}
           </div>
         </div>
-
       </div>
+
+      {/* Minimal animation keyframe */}
+      <style>{`
+        @keyframes ebookFadeIn {
+          from { opacity: 0; transform: translateY(12px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+        }
+      `}</style>
     </>
   );
 }
