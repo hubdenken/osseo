@@ -299,8 +299,8 @@ export default function EbookLanding() {
                 </p>
                 <div className="space-y-4">
                   <a
-                    href="/osseo-ebook.pdf"
-                    download="OSSEO_Living_Bone_Living_Strong.pdf"
+                    href="/OSSEO%20-%20EBOOK%20(1).pdf"
+                    download="OSSEO_EBOOK_Atualizado.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full bg-white text-[#085C68] hover:bg-surface-light py-5 flex items-center justify-center gap-4 transition-colors duration-200 shadow-xl"
