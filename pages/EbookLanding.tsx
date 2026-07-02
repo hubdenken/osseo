@@ -60,14 +60,7 @@ export default function EbookLanding() {
   const chapterRefs = useRef<(HTMLLIElement | null)[]>([]);
   const navigate = useNavigate();
 
-  useEffect(() => {
-    if (status === 'success') {
-      const timer = setTimeout(() => {
-        window.location.href = 'https://osseo.pt/';
-      }, 4000);
-      return () => clearTimeout(timer);
-    }
-  }, [status]);
+
 
 
 
