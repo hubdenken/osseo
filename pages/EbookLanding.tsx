@@ -292,7 +292,7 @@ export default function EbookLanding() {
                 </p>
                 <div className="space-y-4">
                   <a
-                    href="/OSSEO%20-%20EBOOK%20(1).pdf"
+                    href="/osseo-ebook-v2.pdf"
                     download="OSSEO_EBOOK_Atualizado.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
